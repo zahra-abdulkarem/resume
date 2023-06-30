@@ -1,0 +1,647 @@
+@import '/fonts/fonts.googleapis.com_css2_family=Indie+Flower&display=swap.css';
+@import '/fonts/fonts.googleapis.com_css2_family=Ysabeau+SC_wght@300;400&display=swap.css';
+//vars
+
+//color
+$main-color: #6dbac6;
+$second-color: #fcc64b;
+$third-color: #cdefe6;
+$dark-color: #231f40;
+$light-color: #e9e2f4;
+
+//transition
+$transiton-all: .7s;
+
+//fonts
+$font-indie: 'Indie Flower', cursive;
+$font-normal: 'Ysabeau SC', sans-serif;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: $font-normal;
+    transition: $transiton-all;
+}
+body{
+    background: $light-color;
+    scroll-behavior: smooth;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.btn{
+    padding: .75rem 2rem;
+    border-radius: 3rem;
+    font-size: 2rem;
+    // position: relative;
+    // top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transiton-all;
+    margin: 1rem 0;
+    i{
+        margin-left: .4rem;
+    }
+}
+
+.main-btn{
+    border: .15rem solid $second-color;
+    background: $second-color;
+    color: $light-color;
+    &:hover{
+        border: .15rem solid $light-color;
+        background: $light-color;
+        color: $dark-color;
+    }
+}
+
+.second-btn{
+    border: .15rem solid $second-color;
+    background: transparent;
+    color: $second-color;
+    &:hover{
+        border: .15rem solid $light-color;
+        background: $light-color;
+        color: $dark-color;
+    }
+}
+
+.title{
+    color: $dark-color;
+    font-size: 3rem;
+    margin: 1rem;
+    text-align: center;
+    font-family: $font-indie;
+}
+
+
+nav{
+    position: fixed;
+    top: 25vh;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: .65rem;
+    background: #7b797958;
+    border-radius: 3rem;
+    backdrop-filter: blur(1.5rem);
+    z-index: 100;
+    a{
+        padding: .5rem;
+        margin: .5rem;
+        color: $dark-color;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        &:hover{
+            background: $main-color;
+            box-shadow: 0 0 1rem #5a5858;
+            color: #fff;
+        }
+    }
+}
+
+.header-socials{
+    position: fixed;
+    right: 1rem;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 1rem;
+    background: #7b797958;
+    border-radius: 3rem;
+    backdrop-filter: blur(1.5rem);
+    z-index: 100;
+    .line{
+        width: .15rem;
+        height: 5rem;
+        background: $light-color;
+    }
+    a{
+        color: $light-color;
+        padding: .3rem;
+        margin-top: .3rem;
+        font-size: 1.4rem;
+        &:hover{
+            color: $dark-color;
+        }
+    }
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $main-color;
+    height: 80vh;
+    padding: 1rem 2rem;
+    .text-content{
+        width: 100%;
+        padding: 1rem 2rem;
+        h1{
+            font-size: 5rem;
+            font-family: $font-indie;
+            color: $third-color;
+        }
+        .name{
+            font-size: 4rem;
+            color: $dark-color;
+        }
+        .job-title{
+            font-size: 1.6rem;
+            color: $light-color;
+        }
+    }
+    .hero-img{
+        width: 35rem;
+    }
+}
+
+.about{
+    background: $third-color;
+    .about-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .experince{
+            display: flex;
+            align-items: center;
+            .box{
+                margin: 1rem;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: $main-color;
+                border-radius: 2rem;
+                .fa-solid{
+                    font-size: 2.4rem;
+                    color: $light-color;
+                }
+                h6{
+                    font-size: 1.5rem;
+                    color: $light-color;
+                }
+                p{
+                    font-size: 1.1rem;
+                    color: $dark-color;
+                }
+            }
+        }
+        .info{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            .about-image{
+                width: 30rem;
+                height: 30rem;
+                border-radius: 50%;
+            }
+            .text{
+                padding: 1rem 3rem;
+                p{
+                    color: #888;
+                    font-size: 1.4rem;
+                    padding: .75rem 0;
+                }
+                .more-info{
+                    display: none;
+                    &.show{
+                        display: block;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.skills{
+    background: $second-color;
+    padding: 1rem;
+    .skills-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: .5rem;
+        .skill{
+            padding: 1rem;
+            background: $dark-color;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: $light-color;
+            h1{
+                font-size: 2.3rem;
+                font-family: $font-indie;
+            }
+            .fa-brands{
+                font-size: 4rem;
+                &.fa-html5{color: #f34f08;}
+                &.fa-css3-alt{color: #0888f1;}
+                &.fa-js{color: #f2c40b;}
+                &.fa-react{color: #0fb9ed;}
+                &.fa-bootstrap{color: #980af0;}
+                &.fa-sass{color: #f840a8;}
+            }
+            p{
+                font-size: 1.6rem;
+                color: $third-color;
+            }
+            h5{
+                font-size: 1.7rem;
+                font-family: $font-indie;
+                letter-spacing: .3rem;
+            }
+        }
+    }
+}
+
+.services{
+    background: #fff;
+    .services-container{
+        display: flex;
+        align-items: center;
+        .text{
+            padding: 1rem;
+            .fa-paper-plane{
+                float: right;
+                font-size: 3rem;
+                color: $third-color;
+            }
+            h3{
+                font-size: 4rem;
+                color: $second-color;
+                font-family: $font-indie;
+            }
+            p{
+                color: $dark-color;
+                font-size: 1.5rem;
+            }
+            .points{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 1rem 0;
+                i{
+                    font-size: 3rem;
+                    margin: 0 1rem;
+                    color: $third-color;
+                }
+            }
+        }
+    }
+}
+
+.projects{
+    background: $dark-color;
+    padding: 1rem;
+    .title{
+        color: $light-color;
+    }
+    .projects-container{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        .project-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: .5rem;
+            margin: .5rem;
+            border-radius: 2rem;
+            &:hover{
+                background: #f1eeee40;
+                img{
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+            img{
+                width: 100%;
+                height: 17rem;
+                border-radius: 2rem;
+                opacity: .5;
+                transform: scale(.95);
+            }
+            h2{
+                font-size: 2.5rem;
+                color: $second-color;
+                font-family: $font-indie;
+                margin: .5rem 0;
+            }
+            p{
+                font-size: 1.4rem;
+                color: $light-color;
+            }
+            span{ color: #f00; }
+        }
+    }
+}
+
+.contact{
+    background: #fff;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .contact-options{
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $light-color;
+            background: $main-color;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            width: 23rem;
+            margin: .5rem;
+            i{font-size: 3rem;}
+            h1{font-family: $font-indie;}
+            a{font-size: 1.1rem; color: $dark-color;}
+            span{font-size: 1.45rem; color: $second-color;}
+            &:hover{
+                background: $light-color;
+                color: $dark-color;
+            }
+        }
+    }
+}
+
+
+footer{
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    letter-spacing: .3rem;
+    p{
+        font-family: $font-indie;
+    }
+}
+
+@media(max-width: 991px){
+    nav{
+        top: 85vh;
+        left: .5rem;
+        flex-direction: row;
+        padding: .5rem;
+        a{
+            padding: .5rem;
+            margin: .3rem;
+        }
+    }
+    
+    .header-socials{
+        right: .5rem;
+        padding: .2rem;
+        .line{
+            width: .1rem;
+            height: 2.3rem;
+        }
+        a{
+            font-size: 1.2rem;
+            margin-top: .1rem;
+        }
+    }
+    .home{
+        height: 100vh;
+        padding: 1rem;
+        .text-content{
+            padding: 1rem;
+            h1{
+                font-size: 3.4rem;
+            }
+            .name{
+                font-size: 2rem;
+            }
+            .job-title{
+                font-size: 1rem;
+            }
+            .btn{
+                i{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        .hero-img{
+            width: 20rem;
+        }
+    }
+    .about{
+        .about-container{
+            .experince{
+                flex-wrap: wrap;
+                .box{
+                    margin: .5rem;
+                    .fa-solid{ font-size: 2rem; }
+                    h6{ font-size: 1rem;}
+                }
+            }
+            .info{
+                flex-direction: column;
+                padding: .4rem;
+                .about-image{
+                    width: 20rem;
+                    height: 20rem;
+                }
+                .text{
+                    padding: 1rem;
+                }
+            }
+    
+        }
+    }
+    .services{
+        .services-container{
+            flex-direction: column-reverse;
+            .text{
+                padding: 1rem;
+                h3{
+                    font-size: 2.3rem;
+                }
+                p{
+                    font-size: 1.1rem;
+                }
+            }
+            img{
+                width: 20rem;
+            }
+        }
+    }
+    .projects{
+        padding: .7rem;
+        .projects-container{
+            .project-box{
+                img{
+                    height: 14rem;
+                }
+                h2{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .contact{
+        height: 100%;
+        .contact-options{
+            padding: .7rem;
+            flex-wrap: wrap;
+            .box{
+                padding: .5rem;
+                width: 18rem;
+                margin: .5rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 771px){
+    .btn{
+        padding: .6rem 1rem;
+        font-size: 1.2rem;
+        top: 3rem;
+    }
+    .home{
+        height: 100vh;
+        padding: 1rem;
+        .text-content{
+            width: 100%;
+            padding: 0;
+            h1{
+                font-size: 3rem;
+            }
+            .name{
+                font-size: 2rem;
+            }
+            .job-title{
+                font-size: 1.2rem;
+            }
+            .btn{
+                i{
+                    font-size: 1.1rem;
+                    margin-left: .2rem;
+                }
+            }
+        }
+        .hero-img{
+            width: 25rem;
+        }
+    }
+}
+
+@media(max-width: 551px){
+    .btn{
+        padding: .4rem 1rem;
+        font-size: 1rem;
+        top: 3rem;
+    }
+    .home{
+        flex-direction: column-reverse;
+        height: 120vh;
+        padding: .5rem;
+        background: $main-color;
+        .text-content{
+            width: 100%;
+            padding: 0;
+            h1{
+                font-size: 2.6rem;
+            }
+            .name{
+                font-size: 2.4rem;
+            }
+            .job-title{
+                font-size: .9rem;
+            }
+        }
+        .hero-img{
+            width: 100%;
+        }
+    }
+    .about{
+        .about-container{
+            .experince{
+                .box{
+                    margin: .3rem;
+                    padding: .5rem;
+                    border-radius: 1rem;
+                    .fa-solid{
+                        font-size: 1.6rem;
+                    }
+                    h6{
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .info{
+                .about-image{
+                    width: 15rem;
+                    height: 15rem;
+                }
+                .text{
+                    padding: .5rem;
+                }
+            }
+        }
+    }
+    
+    .skills{
+        padding: .5rem;
+        .skills-container{
+            .skill{
+                padding: .7rem;
+                h1{  font-size: 2rem;}
+                .fa-brands{ font-size: 3rem;}
+                p{ font-size: 1.1rem; }
+            }
+        }
+    }
+    
+    .services{
+        .services-container{
+            img{
+                width: 17rem;
+            }
+        }
+    }
+    
+    .projects{
+        .projects-container{
+            grid-template-columns: 100%;
+        }
+    }
+    
+    .contact{
+        .contact-options{
+            .box{
+                padding: .5rem 1rem;
+                width: 17rem;
+                i{font-size: 2rem;}
+                a{font-size: 1rem;}
+                span{font-size: 1.3rem;}
+            }
+        }
+    }
+}
