@@ -144,7 +144,7 @@ nav{
     align-items: center;
     justify-content: center;
     background: $main-color;
-    height: 80vh;
+    height: 100vh;
     padding: 1rem 2rem;
     .text-content{
         width: 100%;
@@ -560,7 +560,7 @@ footer{
     }
     .home{
         flex-direction: column-reverse;
-        height: 120vh;
+        height: 75vh;
         padding: .5rem;
         background: $main-color;
         .text-content{
