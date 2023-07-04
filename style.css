@@ -131,7 +131,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   background: #6dbac6;
-  height: 80vh;
+  height: 100vh;
   padding: 1rem 2rem;
 }
 .home .text-content {
@@ -555,7 +555,7 @@ footer p {
   }
   .home {
     flex-direction: column-reverse;
-    height: 120vh;
+    height: 78vh;
     padding: 0.5rem;
     background: #6dbac6;
   }
